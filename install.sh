@@ -21,7 +21,6 @@ curl -L https://bit.ly/janus-bootstrap | bash
 mkdir -p ~/workspace/github
 
 # node version manager
-
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 
 echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
