@@ -65,3 +65,4 @@
 ![Vscode Icons](images/vscode-icons.png)
 
 
+更多参见 https://github.com/i5ting/vsc
