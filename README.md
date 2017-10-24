@@ -4,7 +4,8 @@
 
 ## 1）oh my zsh是我最习惯的shell，终端下非常好用
 
-配合iterm2分屏，无敌
+配合iterm2分屏 + spectacle全屏，几乎无敌
+
 ## 2）brew是mac装软件非常好的方式，和apt-get、rpm等都非常类似
 
 安装4个必备软件
