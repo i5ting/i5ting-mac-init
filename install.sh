@@ -21,14 +21,6 @@ curl -L https://bit.ly/janus-bootstrap | bash
 # prepare folders
 mkdir -p ~/workspace/github
 
-
-
-# ssh-keygen 
-ssh-keygen 
-cat ~/.ssh/id_rsa.pub
-echo 'save it to https://github.com/settings/keys'
-
-
 # node version manager
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
@@ -48,3 +40,8 @@ nvm install 8
  yrm use cnpm
  npm i -g yarn
  npm i -g lazycommit
+
+ # ssh-keygen 
+ssh-keygen 
+cat ~/.ssh/id_rsa.pub
+echo 'save it to gitlab or https://github.com/settings/keys'
