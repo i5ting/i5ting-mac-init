@@ -10,13 +10,15 @@
 安装4个必备软件
 
 - brew install git 最流行的SCM源码版本控制软件
-- brew install wget 下载、扒站神奇
-- brew install ack  搜索代码神奇
-- brew install autojump 终端下多目录跳转神奇
+- brew install wget 下载、扒站神器
+- brew install ack  搜索代码神器
+- brew install autojump 终端下多目录跳转神器
 
 ## 3）vim
 
 我虽然不算vim党，但也深爱着。janus是一个非常好用的vim集成开发环境。比如ctrl-p、nerdtree等插件都集成了，对我这种懒人足够了。
+
+![Vim](images/vim.png)
 
 ## 4）准备工作目录
 
@@ -33,5 +35,33 @@
 
 生成ssh key，上传到github或者gitlab都行
 
+## 7）VSCode（手动）
+
+下载安装VScode
+
+- 配置code命令
+- 配置快捷键
+- 安装vsconde-icons插件
+
+配置code命令
+
+![Vscode Code](images/vscode-code.png)
+
+配置快捷键，最喜欢cmd + [1-5]，这和xcode习惯一直，非常棒
+
+```
+// 将键绑定放入此文件中以覆盖默认值
+[
+    { "key": "cmd+1",           "command": "workbench.view.explorer" },
+    { "key": "cmd+2",           "command": "workbench.view.search" },
+    { "key": "cmd+3",           "command": "workbench.view.scm" },
+    { "key": "cmd+4",           "command": "workbench.view.debug" },
+    { "key": "cmd+5",           "command": "workbench.view.extensions" }
+]
+```
+
+安装vsconde-icons插件，对各种文件扩展都有icon显示，更直观
+
+![Vscode Icons](images/vscode-icons.png)
 
 
