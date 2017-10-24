@@ -6,7 +6,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install brew
+# brew install
 brew install git
 brew install wget
 brew install ack
@@ -19,3 +19,10 @@ curl -L https://bit.ly/janus-bootstrap | bash
 
 # prepare folders
 mkdir -p ~/workspace/github
+
+
+
+# ssh-keygen 
+ssh-keygen 
+cat ~/.ssh/id_rsa.pub
+echo 'save it to https://github.com/settings/keys'
