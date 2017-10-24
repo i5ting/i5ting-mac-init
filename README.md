@@ -64,5 +64,8 @@
 
 ![Vscode Icons](images/vscode-icons.png)
 
+## 更多
 
-更多参见 https://github.com/i5ting/vsc
+- Node.js新手指南 https://github.com/i5ting/nodejs-newbie
+- VSCode手册 https://github.com/i5ting/vsc
+- Ask me anything in 《Node全栈》 https://github.com/i5ting/ama
