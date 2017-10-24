@@ -17,7 +17,6 @@ source ~/.zshrc
 # vim
 curl -L https://bit.ly/janus-bootstrap | bash
 
-
 # prepare folders
 mkdir -p ~/workspace/github
 
@@ -34,12 +33,11 @@ nvm install 4
 nvm install 6
 nvm install 8
 
+npm install --global yrm --registry=https://registry.npm.taobao.org
 
- npm install --global yrm --registry=https://registry.npm.taobao.org
-
- yrm use cnpm
- npm i -g yarn
- npm i -g lazycommit
+yrm use cnpm
+npm i -g yarn
+npm i -g lazycommit
 
  # ssh-keygen 
 ssh-keygen 
