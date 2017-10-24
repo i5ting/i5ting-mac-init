@@ -33,7 +33,7 @@
 
 ## 6）ssh-keygen
 
-生成ssh key，上传到github或者gitlab都行
+生成ssh key（一路回车即可），上传到github或者gitlab都行
 
 ## 7）VSCode（手动）
 
