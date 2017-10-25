@@ -37,6 +37,7 @@ npm install --global yrm --registry=https://registry.npm.taobao.org
 yrm use cnpm
 npm i -g yarn
 npm i -g lazycommit
+npm i -g lazyclone
 
  # ssh-keygen 
 ssh-keygen 

@@ -31,6 +31,7 @@
 - 安装nrm，切换npm源为国内最快的cnpm
 - 安装yarn，更好的npm替代软件
 - 安装lazycommit，我自己写的一些shell别名，比如gs=git status
+- 安装lazyclone，clone下来代码后，自动安装npm模块
 
 ## 6）ssh-keygen
 
