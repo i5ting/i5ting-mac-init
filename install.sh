@@ -36,7 +36,10 @@ npm install --global yrm --registry=https://registry.npm.taobao.org
 
 yrm use cnpm
 npm i -g yarn
-npm i -g lazycommit
+
+# https://github.com/i5ting/i5ting-mac-init/issues/1 
+# ~/.oh-my-zsh/plugins/git/git.plugin.zsh 和lazycommit效果一样，故而弃用
+# npm i -g lazycommit
 npm i -g lazyclone
 
  # ssh-keygen 
