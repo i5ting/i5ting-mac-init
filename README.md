@@ -2,6 +2,10 @@
 
 自己Mac电脑初始化的安装脚本
 
+```
+$ curl -o- https://raw.githubusercontent.com/i5ting/i5ting-mac-init/master/install.sh | bash
+```
+
 ## 1）oh my zsh是我最习惯的shell，终端下非常好用
 
 配合iterm2分屏 + spectacle全屏，几乎无敌
