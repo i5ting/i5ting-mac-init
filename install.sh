@@ -47,3 +47,6 @@ npm i -g lazyclone
 ssh-keygen 
 cat ~/.ssh/id_rsa.pub
 echo 'save it to gitlab or https://github.com/settings/keys'
+
+# move vscode keybindings
+cp -f keybindings.json ~/Library/Application\ Support/Code/User
