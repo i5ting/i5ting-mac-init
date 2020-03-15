@@ -2,6 +2,7 @@
 
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+chsh -s /bin/zsh
 
 # brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -29,10 +30,8 @@ echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
 echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.zshrc
 source ~/.zshrc
 
-nvm install 0.10
-nvm install 4
-nvm install 6
-nvm install 8
+nvm install stable
+nvm alias default node 
 
 npm install --global yrm --registry=https://registry.npm.taobao.org
 
@@ -41,7 +40,7 @@ npm i -g yarn
 
 # https://github.com/i5ting/i5ting-mac-init/issues/1 
 # ~/.oh-my-zsh/plugins/git/git.plugin.zsh 和lazycommit效果一样，故而弃用
-# npm i -g lazycommit
+npm i -g lazycommit
 npm i -g lazyclone
 
  # ssh-keygen 
