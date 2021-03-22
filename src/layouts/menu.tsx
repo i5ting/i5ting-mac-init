@@ -11,7 +11,7 @@ const LINE_HEIGHT = '84px';
 
 export default function (props: any) {
   return (
-    <Sider width='66px' style={{
+    <Sider width='' style={{
       position: 'fixed', top: '30px', right: 0, left: '0px', bottom: 0, overflow: 'scroll'
       
     }}>

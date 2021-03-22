@@ -22,11 +22,11 @@ package-lock.json
 .DS_Store
 
 # umi
-example/node_modules
-example/src/.umi
-example/src/.umi-production
-example/src/.umi-test
-example/.env.local
+node_modules
+src/.umi
+src/.umi-production
+src/.umi-test
+env.local
 
 # eslint
 .eslint-error.log
