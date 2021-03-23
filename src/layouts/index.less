@@ -6,7 +6,12 @@ html, body {height: 100%; margin: 0;}
 body {
   font-family: "Segoe UI", sans-serif;
   background: #1085F9;
-  // color: #FFF;
+  //禁止文本选中
+  -moz-user-select:none; /*火狐*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -ms-user-select:none; /*IE10*/
+  -khtml-user-select:none; /*早期浏览器*/
+  user-select:none;
 }
 h1 {margin: 0 0 10px 0; font-weight: 600; line-height: 1.2;}
 p {margin-top: 10px; color: rgba(255,255,255,0.4);}
