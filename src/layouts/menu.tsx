@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route, Switch, Redirect } from 'umi'
 import { Layout, Menu, Row, Col } from 'antd';
-import { HomeOutlined, PlayCircleOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import { ReadOutlined, HomeOutlined, PlayCircleOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -29,7 +29,7 @@ export default function (props: any) {
               }}>
               <HomeOutlined style={{margin:'0px', paddingTop:'10px',fontSize: 24, color:'#FFFDFD',display: 'block', verticalAlign: 'middle'  }} />
             </div> 
-            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 10, width: '100%', display:'block',height:'33px'}}>
+            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 12, width: '100%', display:'block',height:'33px'}}>
               主页
             </div> 
           </div>
@@ -43,8 +43,22 @@ export default function (props: any) {
               }}>
               <AppstoreOutlined style={{margin:'0px', paddingTop:'10px',fontSize: 24, color:'#FFFDFD',display: 'block', verticalAlign: 'middle'  }} />
             </div> 
-            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 10, width: '100%', display:'block',height:'33px'}}>
+            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 12, width: '100%', display:'block',height:'33px'}}>
               应用
+            </div> 
+          </div>
+        </Menu.Item>
+        <Menu.Item key="/31" style={{ height: LINE_HEIGHT, padding: "15px 20px 20px 20px", color:"#FFFDFD"}}>
+          <Link to="/3" />
+          <div className="item">
+            <div className="sd" style={{
+              width: '100%', display:'block',height:'33px',
+              fontSize: 20,
+              }}>
+              <ReadOutlined style={{margin:'0px', paddingTop:'10px',fontSize: 24, color:'#FFFDFD',display: 'block', verticalAlign: 'middle'  }} />
+            </div> 
+            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 12, width: '100%', display:'block',height:'33px'}}>
+              文档
             </div> 
           </div>
         </Menu.Item>
@@ -57,53 +71,8 @@ export default function (props: any) {
               }}>
               <SettingOutlined style={{margin:'0px', paddingTop:'10px',fontSize: 24, color:'#FFFDFD',display: 'block', verticalAlign: 'middle'  }} />
             </div> 
-            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 10, width: '100%', display:'block',height:'33px'}}>
+            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 12, width: '100%', display:'block',height:'33px'}}>
               设置
-            </div> 
-          </div>
-        </Menu.Item>
-
-        <Menu.Item key="/31" style={{ height: LINE_HEIGHT, padding: "15px 20px 20px 20px", color:"#FFFDFD"}}>
-          <Link to="/3" />
-          <div className="item">
-            <div className="sd" style={{
-              width: '100%', display:'block',height:'33px',
-              fontSize: 20,
-              }}>
-              <HomeOutlined style={{margin:'0px', paddingTop:'10px',fontSize: 24, color:'#FFFDFD',display: 'block', verticalAlign: 'middle'  }} />
-            </div> 
-            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 10, width: '100%', display:'block',height:'33px'}}>
-              主页
-            </div> 
-          </div>
-        </Menu.Item>
-
-        <Menu.Item key="/4" style={{ height: LINE_HEIGHT, padding: "15px 20px 20px 20px", color:"#FFFDFD"}}>
-          <Link to="/3" />
-          <div className="item">
-            <div className="sd" style={{
-              width: '100%', display:'block',height:'33px',
-              fontSize: 20,
-              }}>
-              <HomeOutlined style={{margin:'0px', paddingTop:'10px',fontSize: 24, color:'#FFFDFD',display: 'block', verticalAlign: 'middle'  }} />
-            </div> 
-            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 10, width: '100%', display:'block',height:'33px'}}>
-              主页
-            </div> 
-          </div>
-        </Menu.Item>
-
-        <Menu.Item key="/5" style={{ height: LINE_HEIGHT, padding: "15px 20px 20px 20px", color:"#FFFDFD"}}>
-          <Link to="/3" />
-          <div className="item">
-            <div className="sd" style={{
-              width: '100%', display:'block',height:'33px',
-              fontSize: 20,
-              }}>
-              <HomeOutlined style={{margin:'0px', paddingTop:'10px',fontSize: 24, color:'#FFFDFD',display: 'block', verticalAlign: 'middle'  }} />
-            </div> 
-            <div className="sd" style={{marginTop:'-5px',textAlign:'center',fontSize: 10, width: '100%', display:'block',height:'33px'}}>
-              主页
             </div> 
           </div>
         </Menu.Item>

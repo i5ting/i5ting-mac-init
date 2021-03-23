@@ -1,24 +1,37 @@
 import React from 'react';
 import styles from './index.less';
-import { Button } from 'antd';
+import { Input, Tooltip, Avatar, Button, Space, Upload, Popconfirm, Divider, Row, Col } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
+import { SearchOutlined, QuestionCircleOutlined, MessageOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 
-export default function() {
+const text = "sds"
+
+export default function () {
   return (
-    <div className={styles.normal}>
-      <Button type="primary">Primary Button</Button>
-      <Button>Default Button</Button>
-      <Button type="dashed">Dashed Button</Button>
-      <br />
-      <Button type="link">Link Button</Button>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
-        <li>
-          <a href="https://umijs.org/guide/getting-started.html">
-            Getting Started
-          </a>
-        </li>
-      </ul>
+    <div className={styles.main}>
+      <div className={styles.header} style={{ padding: '10px 0px', float: 'right' }}>
+        <div className={styles.header_left} >
+          <Input placeholder="input search text" prefix={<SearchOutlined />} bordered={false} size="large" />
+        </div>
+        <div className={styles.header_right} >
+          <Tooltip placement="bottomLeft" title={text} color='gray'>
+            <QuestionCircleOutlined style={{ margin: '0 10px', fontSize: 24, color: '#C0C0C0', verticalAlign: 'middle' }} />
+          </Tooltip>
+          <Tooltip placement="bottom" title={text}>
+            <MessageOutlined style={{ margin: '0 10px', fontSize: 24, color: '#C0C0C0', verticalAlign: 'middle' }} />
+          </Tooltip>
+          <Tooltip placement="bottomRight" title={text}>
+            <SettingOutlined style={{ margin: '0 10px', fontSize: 24, color: '#A9A9A9', verticalAlign: 'middle' }} />
+          </Tooltip>
+          <Avatar icon={<UserOutlined />} style={{ margin: '0 20px' }} />
+        </div>
+      </div>
+      <Divider />
+      <div className={styles.normal}>
+        <br/>
+        <Button type="link">Link Button</Button>
+        <div className={styles.welcome} />
+      </div>
     </div>
   );
 }
