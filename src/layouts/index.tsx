@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from "react"
 import styles from './index.less';
 import LeftSider from './menu';
-import { Link, Route, Switch, Redirect } from 'umi'
+import { Link, Route, Switch, Redirect, useLocation } from 'umi'
+import { withRouter, IRouteComponentProps } from 'umi';
 import { Layout, Menu } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -22,19 +23,34 @@ const MyFooter = () => {
   );
 }
 
-const BasicLayout: React.FC = props => {
+const BasicLayout: React.FC = ({ children, location, route, history, match }: any) => {
+  // const location = useLocation()
+
+  useEffect(() => {
+    console.log("*", location.pathname)
+    console.log("*", route)
+    console.log("*", history)
+    console.log("*", match) 
+    console.log("*--------------")
+
+    var currentNode = document.getElementsByClassName("ant-menu-item-selected")[0] 
+    if (currentNode) {
+      var nodes = Array.prototype.slice.call( currentNode?.parentNode?.children );
+      if (location.pathname!='/' && nodes.indexOf( currentNode ) === 0){
+        console.log('redirect /')
+        window.location.href='/'
+      } 
+    }
+  }, [])
+
   return (
-    // <div className={styles.normal}>
-    //   <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-    //   {props.children}
-    // </div>
     <div>
       <Layout className='main-layout'>
         <MyHeader />
         <Layout>
           <LeftSider />
           <div className={styles.rightcolumn}>
-            {props.children}
+            {children}
           </div>
         </Layout>
         {/* <MyFooter /> */}
@@ -43,4 +59,4 @@ const BasicLayout: React.FC = props => {
   );
 };
 
-export default BasicLayout;
+export default withRouter(BasicLayout);

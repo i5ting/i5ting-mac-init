@@ -7,18 +7,19 @@ import { plugin } from './plugin';
 export function getRoutes() {
   const routes = [
   {
+    "exact": false,
     "path": "/",
     "component": require('@/layouts/index.tsx').default,
     "routes": [
       {
-        "path": "/",
         "exact": true,
-        "component": require('@/pages/index.tsx').default
+        "path": "/",
+        "component": require('@/pages/index').default
       },
       {
-        "path": "/user",
         "exact": true,
-        "component": require('@/pages/user.js').default
+        "path": "/user",
+        "component": require('@/pages/user').default
       }
     ]
   }
