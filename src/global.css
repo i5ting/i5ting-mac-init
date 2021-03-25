@@ -6,36 +6,18 @@ body {
   margin: 0;
 }
 
-.item {
-  width: '66px';
-  height: '65px';
-  display: block;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 2rem;
+.ant-menu {
+  background: rgba(23, 128, 240) !important;
 }
 
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-  padding: auto;
-  background-color: #3980a1; 
+  background-color: rgba(28, 121, 223) !important;
 }
 
-.ant-menu-item {
-    width: 66px;
-    height: 66px !important;
-    /* line-height: 66px !important; */
-    margin: 0 !important;
-    padding: 0 0px !important;
+.ant-menu-item a:hover {
+  color: #fff !important;
 }
 
-.ant-menu-item-active {
-    background-color: #9da090 !important;
-    color: rgb(189, 42, 42) !important;
+.ant-menu-inline .ant-menu-submenu-title {
+  width: calc(100%);
 }
-
-.ant-menu-submenu > .ant-menu {
-    width: 100px;
-    min-width: 100px;
-}
-
