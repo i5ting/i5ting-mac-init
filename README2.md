@@ -24,7 +24,8 @@ git clone https://github.com/electron/electron-quick-start
 # Go into the repository
 cd electron-quick-start
 # Install dependencies
-npm install
+export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+npm i
 # Run the app
 npm start
 ```

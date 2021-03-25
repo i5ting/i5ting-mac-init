@@ -5,8 +5,9 @@
   "main": "main.js",
   "scripts": {
     "pack": "electron-builder --dir",
+    "rebuild": "electron-builder rebuild",
     "dist": "electron-builder",
-    "electron": "electron .",
+    "electron": "electron ./main.js",
     "dev": "NODE_ENV=development electron .",
     "start": "umi dev",
     "build": "umi build",
@@ -44,6 +45,7 @@
     "@ant-design/icons": "^4.2.1",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.3",
+    "axios": "^0.21.1",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
