@@ -4,7 +4,21 @@ import { Input, Tooltip, Avatar, Button, Space, Upload, Popconfirm, Divider, Row
 import { UploadOutlined } from '@ant-design/icons';
 import { SearchOutlined, QuestionCircleOutlined, MessageOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 
-const text = "sds"
+// const { remote, ipcRenderer } = window.require('electron')
+
+// var shell = require('shelljs');
+// let nodePath = (shell.which('node').toString());
+// shell.config.execPath = nodePath;
+
+
+const text = <span>prompt text</span>;
+
+const buttonWidth = 70;
+
+function oneClick(){
+  alert(1)
+  // shell.exec('git');
+}
 
 export default function () {
   return (
@@ -28,8 +42,36 @@ export default function () {
       </div>
       <Divider />
       <div className={styles.normal}>
-        <br/>
-        <Button type="link">Link Button</Button>
+        <br />
+        <h1>常用Shell命令</h1>
+        <div className="demo" style={{ marginLeft:'200px' }}>
+          <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
+            <Button onClick={oneClick} >第一个</Button>
+            <Button>Top</Button>
+            <Button>TR</Button>
+          </div>
+          <div style={{ width: buttonWidth, float: 'left' }}>
+            <Button>TL</Button>
+            <Button>Top</Button>
+            <Button>TR</Button>
+          </div>
+          <div style={{ width: buttonWidth, marginLeft: buttonWidth * 4 + 24 }}>
+            <Button>TL</Button>
+            <Button>Top</Button>
+            <Button>TR</Button>
+          </div>
+          <div style={{ marginLeft: buttonWidth, clear: 'both', whiteSpace: 'nowrap' }}>
+            <Tooltip placement="bottomLeft" title={text}>
+              <Button>BL</Button>
+            </Tooltip>
+            <Tooltip placement="bottom" title={text}>
+              <Button>Bottom</Button>
+            </Tooltip>
+            <Tooltip placement="bottomRight" title={text}>
+              <Button>BR</Button>
+            </Tooltip>
+          </div>
+        </div>
         <div className={styles.welcome} />
       </div>
     </div>

@@ -2,6 +2,26 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url')
+const processMessage = require('./processMessage')
+const {is} = require('electron-util');
+
+console.log(is.macos && is.main);
+
+const debug = require('electron-debug');
+
+const fixPath = require('fix-path');
+
+console.log(process.env.PATH);
+//=> '/usr/bin'
+
+fixPath();
+
+console.log(process.env.PATH);
+//=> '/usr/local/bin:/usr/bin'
+
+
+
+if (process.env.NODE_ENV === 'development') debug();
 
 function createWindow () {
   // Create the browser window.
@@ -12,7 +32,8 @@ function createWindow () {
     frame: false,
     titleBarStyle: 'hidden',
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      nodeIntegration: true,  //设置为true就可以在这个渲染进程中调用Node.js
+      preload: path.join(__dirname, './preload.js')
     }
   })
 
@@ -39,11 +60,14 @@ function createWindow () {
     );
   }
 
+  // 主线程和渲染进程通信
+  const ProcessMessage = new processMessage(mainWindow)
+  ProcessMessage.init()
   
 }
 
 // This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
+// initialization and is ready to create browser win.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow()

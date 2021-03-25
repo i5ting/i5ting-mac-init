@@ -6,8 +6,8 @@
   "scripts": {
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "electron": "electron .",
-    "dev": "NODE_ENV=development electron .",
+    "electron": "electron app/main.js",
+    "dev": "NODE_ENV=development electron app/main.js",
     "start": "umi dev",
     "build": "umi build",
     "postinstall": "umi generate tmp",
@@ -27,7 +27,8 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^9.0.0",
-    "electron-builder": "^22.10.5"
+    "electron-builder": "^22.10.5",
+    "electron-debug": "^3.2.0"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -44,10 +45,15 @@
     "@ant-design/icons": "^4.2.1",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.3",
+    "electron-util": "^0.14.2",
+    "fix-path": "^3.0.0",
     "lint-staged": "^10.0.7",
+    "node-cmd": "^4.0.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "shelljs": "^0.8.4",
+    "sudo-prompt": "^9.2.1",
     "umi": "^3.2.3",
     "yorkie": "^2.0.0"
   }
