@@ -4,20 +4,17 @@ import { Input, Tooltip, Avatar, Button, Space, Upload, Popconfirm, Divider, Row
 import { UploadOutlined } from '@ant-design/icons';
 import { SearchOutlined, QuestionCircleOutlined, MessageOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 
-// const { remote, ipcRenderer } = window.require('electron')
-
-// var shell = require('shelljs');
-// let nodePath = (shell.which('node').toString());
-// shell.config.execPath = nodePath;
-
-
 const text = <span>prompt text</span>;
 
 const buttonWidth = 70;
 
-function oneClick(){
-  alert(1)
-  // shell.exec('git');
+async function oneClick() {
+  const result = await window.ipcRenderer.invoke('my-invokable-ipc', 'ping')
+  if(result === 1) {
+    alert('执行成功')
+  }else{
+    alert('执行失败')
+  }
 }
 
 export default function () {
@@ -44,7 +41,7 @@ export default function () {
       <div className={styles.normal}>
         <br />
         <h1>常用Shell命令</h1>
-        <div className="demo" style={{ marginLeft:'200px' }}>
+        <div className="demo" style={{ marginLeft: '200px' }}>
           <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
             <Button onClick={oneClick} >第一个</Button>
             <Button>Top</Button>

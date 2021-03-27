@@ -1,27 +1,42 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow,ipcMain,ipcRenderer} = require('electron')
 const path = require('path')
 const url = require('url')
 const processMessage = require('./processMessage')
 const {is} = require('electron-util');
 
+const shell = require('shelljs');
+const nodePath = (shell.which('node').toString());
+shell.config.execPath = nodePath;
 console.log(is.macos && is.main);
 
-const debug = require('electron-debug');
+require('fix-path')();
 
-const fixPath = require('fix-path');
+ipcMain.handle('my-invokable-ipc', async (event, ...args) => {
+  const result = await shell.exec('git').code
+  return result
+})
 
-console.log(process.env.PATH);
-//=> '/usr/bin'
+ipcMain.handle('perform-action', (event, ...args) => {
+  // ... do actions on behalf of the Renderer
+  console.log("perform-action")
+  // shell.exec('git');
+  event.reply("send-message-to-renderer","这是来自主进程的问候");
+  // shell.exec('git', function(code, stdout, stderr) {
+  //   console.log('Exit code:', code);
+  //   console.log('Program output:', stdout);
+  //   console.log('Program stderr:', stderr);
+  //   event.reply("send-message-to-renderer","这是来自主进程的问候");
+  // });
+})
 
-fixPath();
-
-console.log(process.env.PATH);
-//=> '/usr/local/bin:/usr/bin'
-
-
-
-if (process.env.NODE_ENV === 'development') debug();
+if (process.env.NODE_ENV === 'development') {
+  try {
+    require('electron-debug')()
+  } catch (_) {
+    console.dir(_)
+  }
+}
 
 function createWindow () {
   // Create the browser window.
@@ -63,7 +78,6 @@ function createWindow () {
   // 主线程和渲染进程通信
   const ProcessMessage = new processMessage(mainWindow)
   ProcessMessage.init()
-  
 }
 
 // This method will be called when Electron has finished

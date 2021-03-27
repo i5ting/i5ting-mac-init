@@ -1,5 +1,6 @@
 // ./src/processMessage.js
 const { ipcMain } = require('electron')
+
 class ProcessMessage {
   /**
    * 进程通信
@@ -38,4 +39,5 @@ class ProcessMessage {
     this.win.webContents.send('win-focus', isActive)
   }
 }
+
 module.exports = ProcessMessage
