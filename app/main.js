@@ -4,6 +4,7 @@ const path = require('path')
 const url = require('url')
 const processMessage = require('./processMessage')
 const {is} = require('electron-util');
+const tray = require('./tray')
 
 const shell = require('shelljs');
 const nodePath = (shell.which('node').toString());
@@ -52,6 +53,22 @@ function createWindow () {
     }
   })
 
+  tray(function(){
+    return mainWindow
+  }, {
+    show:{
+      message: "show"
+    },
+    hide:{
+      message: "hide"
+    },
+    quit:{
+      message: "quit"
+    },
+    trayTooltip:{
+      message: "sddsd"
+    }
+  })
 
   mainWindow.setMenuBarVisibility(false);
   // // and load the index.html of the app.
