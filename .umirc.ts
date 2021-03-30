@@ -13,7 +13,7 @@ export default defineConfig({
     { exact: false, path: '/', component: '@/layouts/index.tsx',
       routes: [
         { exact: true, path: '/', component: '@/pages/index' },
-        { exact: true, path: '/user', component: '@/pages/user' },
+        { exact: true, path: '/app', component: '@/pages/app' },
       ]
     }
   ]

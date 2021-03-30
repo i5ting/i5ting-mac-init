@@ -18,8 +18,8 @@ export function getRoutes() {
       },
       {
         "exact": true,
-        "path": "/user",
-        "component": require('@/pages/user').default
+        "path": "/app",
+        "component": require('@/pages/app').default
       }
     ]
   }

@@ -34,8 +34,8 @@ export default function (props: any) {
             </div> 
           </div>
         </Menu.Item>
-        <Menu.Item key="/user" style={{ height: LINE_HEIGHT, padding: "15px 20px 20px 20px", color:"#FFFDFD"}}>
-          <Link to="/user" />
+        <Menu.Item key="/app" style={{ height: LINE_HEIGHT, padding: "15px 20px 20px 20px", color:"#FFFDFD"}}>
+          <Link to="/app" />
           <div className="item">
             <div className="sd" style={{
               width: '100%', display:'block',height:'33px',
