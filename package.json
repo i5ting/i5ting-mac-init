@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
+    "dist": "npm run build & electron-builder",
     "electron": "electron app/main.js",
     "dev": "NODE_ENV=development electron app/main.js",
     "start": "umi dev",
