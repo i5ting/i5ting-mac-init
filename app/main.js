@@ -33,7 +33,7 @@ ipcMain.handle('perform-action', (event, ...args) => {
 
 if (process.env.NODE_ENV === 'development') {
   try {
-    require('electron-debug')()
+    // require('electron-debug')()
   } catch (_) {
     console.dir(_)
   }

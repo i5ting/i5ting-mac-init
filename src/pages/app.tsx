@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./app.less";
+import { Input, Tooltip, Button, Space, Upload, Popconfirm, Divider, Row, Col } from 'antd';
 import { notification, Tabs, List, Avatar } from "antd";
+import { SearchOutlined, QuestionCircleOutlined, MessageOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
+
 // import axios from "axios";
+const text = <span>prompt text</span>;
+
+const buttonWidth = 70;
 
 const MENU = [
   {
@@ -56,6 +62,29 @@ export default function() {
     );
   };
 
+  const renderHeader = () => {
+    return (
+      <div className={styles.header} style={{ padding: '10px 0px', float: 'right' }}>
+        <div className={styles.header_left} >
+          <Input placeholder="input search text" prefix={<SearchOutlined />} bordered={false} size="large" />
+        </div>
+        <div className={styles.header_right} >
+          <Tooltip placement="bottomLeft" title={text} color='gray'>
+            <QuestionCircleOutlined style={{ margin: '0 10px', fontSize: 24, color: '#C0C0C0', verticalAlign: 'middle' }} />
+          </Tooltip>
+          <Tooltip placement="bottom" title={text}>
+            <MessageOutlined style={{ margin: '0 10px', fontSize: 24, color: '#C0C0C0', verticalAlign: 'middle' }} />
+          </Tooltip>
+          <Tooltip placement="bottomRight" title={text}>
+            <SettingOutlined style={{ margin: '0 10px', fontSize: 24, color: '#A9A9A9', verticalAlign: 'middle' }} />
+          </Tooltip>
+          <Avatar icon={<UserOutlined />} style={{ margin: '0 20px' }} />
+        </div>
+      </div>
+    );
+  };
+
+
   const renderMenu = () => {
     const { TabPane } = Tabs;
     return (
@@ -83,6 +112,8 @@ export default function() {
 
   return (
     <div className={styles.main}>
+      <div className={styles.header}>{renderHeader()}</div>
+      <Divider />
       <div className={styles.tabsWrapper}>{renderMenu()}</div>
     </div>
   );
