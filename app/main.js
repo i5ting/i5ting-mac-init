@@ -46,6 +46,7 @@ function createWindow () {
     height: 600,
     transparent: true,
     frame: false,
+    resizable: false,
     titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: true,  //设置为true就可以在这个渲染进程中调用Node.js
