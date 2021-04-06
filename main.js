@@ -2,8 +2,8 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const url = require("url");
-const http = require("http");
-const middleware = require("./server");
+const initIPC = require("./app/index");
+const SocketServer = require("./app/socket_server");
 
 function createWindow() {
   // Create the browser window.
@@ -14,22 +14,24 @@ function createWindow() {
     frame: false,
     titleBarStyle: "hidden",
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, "preload.js")
     }
   });
 
   mainWindow.setMenuBarVisibility(false);
-  // // and load the index.html of the app.
+  // and load the index.html of the app.
   // mainWindow.loadFile('index.html')
 
-  // // Open the DevTools.
+  // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
   global.title = "Yay! Welcome to umi-electron-typescript!";
 
   if (process.env.NODE_ENV === "development") {
     mainWindow.loadURL("http://localhost:8000/#/");
-    // mainWindow.webContents.openDevTools();
+    // 本地调试使用模拟器调试模式
+    mainWindow.webContents.openDevTools();
   } else {
     mainWindow.loadURL(
       url.format({
@@ -46,8 +48,10 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow();
-
-  http.createServer(middleware).listen(3000);
+  initIPC();
+  // init socket
+  const socketServer = new SocketServer();
+  socketServer.start();
 
   app.on("activate", function() {
     // On macOS it's common to re-create a window in the app when the

@@ -46,10 +46,17 @@
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.2.3",
     "axios": "^0.21.1",
+    "debug": "^4.3.1",
+    "electron-renderer": "^2.0.4",
+    "express": "^4.17.1",
+    "jszip": "^3.6.0",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "require-dir": "^1.2.0",
+    "socket.io": "^4.0.0",
+    "socket.io-client": "^4.0.0",
     "umi": "^3.2.3",
     "yorkie": "^2.0.0"
   }

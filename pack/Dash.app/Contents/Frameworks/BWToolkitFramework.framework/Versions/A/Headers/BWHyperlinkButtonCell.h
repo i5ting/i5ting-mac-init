@@ -1,0 +1,18 @@
+//
+//  BWHyperlinkButtonCell.h
+//  BWToolkit
+//
+//  Created by Brandon Walkin (www.brandonwalkin.com)
+//  All code is provided under the New BSD license.
+//
+
+#import <Cocoa/Cocoa.h>
+
+@interface BWHyperlinkButtonCell : NSButtonCell
+{
+
+}
+
+- (NSDictionary *)_textAttributes;
+
+@end

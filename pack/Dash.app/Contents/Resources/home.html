@@ -1,0 +1,31 @@
+<html><head><title>Welcome!</title>
+<style type="text/css">
+.downloadButton {
+	background:url(homeDownload.png) transparent no-repeat;    background-image: -webkit-image-set(url(homeDownload.png) 1x, url(homeDownloadRetina.png) 2x);    background-size:64px 64px;    padding-left:80px !important;    background-position:left;    font-size:20px;    height:64px;    display:inline-block;    vertical-align:middle;
+}
+.settingsButton {
+	background:url(homeSettings.png) transparent no-repeat;    background-image: -webkit-image-set(url(homeSettings.png) 1x, url(homeSettingsRetina.png) 2x);    background-size:64px 64px;    padding-left:80px !important;    background-position:left;    font-size:20px;    height:64px;    display:inline-block;    vertical-align:middle;
+}
+.guideButton {
+	background:url(homeGuide.png) transparent no-repeat;    background-image: -webkit-image-set(url(homeGuide.png) 1x, url(homeGuideRetina.png) 2x);    background-size:64px 64px;    padding-left:80px !important;    background-position:left;    font-size:20px;    height:64px;    display:inline-block;    vertical-align:middle;
+}
+.button {
+	cursor: pointer;
+}
+
+.button:hover {
+	font-weight: 600;
+}
+</style>
+
+</head>
+
+<body style='background-color:#FAFAFA; padding: 0px; margin: 0px;height: 90%; width: 100%; font-family: Myriad Pro;-webkit-user-select:none;'>
+<div style='text-align:center'>
+	<div style='padding-left: 15px;min-width: 300px;text-align: left;display:inline-block;margin:auto;margin-top: 100px;'>
+	<div onclick="window.dash.openDownloads();" style='height: 64px; margin-bottom: 30px;' class='button'><div class='downloadButton'></div><span style='display:inline-block; vertical-align:middle; font-size: 22px;'>Download Docsets</span></div>
+	<div onclick="window.dash.openDocsets();" style='height: 64px; margin-bottom: 30px;' class='button'><div class='settingsButton'></div><span style='display:inline-block; vertical-align:middle; font-size: 22px;'>Manage Docsets</span></div>
+	<div onclick="window.dash.openGuide();" style='height: 64px; margin-bottom: 30px;' class='button'><div class='guideButton'></div><span style='display:inline-block; vertical-align:middle; font-size: 22px;'>User Guide</span></div>
+	</div></div>
+</body>
+</html>

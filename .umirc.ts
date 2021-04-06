@@ -4,6 +4,16 @@ export default defineConfig({
   nodeModulesTransform: {
     type: "none"
   },
+  // electron-renderer
+  chainWebpack(memo, { env, webpack, createCSSRule }) {
+    // memo.merge({ target: 'electron-renderer' });
+    // // 设置 alias
+    // memo.resolve.alias.set('foo', '/tmp/a/b/foo');
+    // // 删除 umi 内置插件
+    // memo.plugins.delete('progress');
+    // memo.plugins.delete('friendly-error');
+    // memo.plugins.delete('copy');
+  },
   antd: {},
   theme: {
     "@primary-color": "#0070cc",
@@ -64,7 +74,9 @@ export default defineConfig({
       component: "@/layouts/index.tsx",
       routes: [
         { exact: true, path: "/", component: "@/pages/home" },
-        { exact: true, path: "/user", component: "@/pages/user" }
+        { exact: true, path: "/app", component: "@/pages/app" },
+        { exact: true, path: "/doc", component: "@/pages/doc" },
+        { exact: true, path: "/setting", component: "@/pages/setting" }
       ]
     }
   ]
