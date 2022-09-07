@@ -20,6 +20,8 @@ git config --global user.name  'i5ting'
 git config --global user.email 'i5ting@126.com'
 
 echo '[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh' >> ~/.zshrc
+# 替换brew国内源
+echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"' >> ~/.zshrc
 source ~/.zshrc
 
 # vim
