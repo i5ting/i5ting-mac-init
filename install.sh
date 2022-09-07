@@ -16,6 +16,9 @@ brew install ack
 brew install autojump
 brew install tree
 
+git config --global user.name  'i5ting'
+git config --global user.email 'i5ting@126.com'
+
 echo '[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh' >> ~/.zshrc
 source ~/.zshrc
 
