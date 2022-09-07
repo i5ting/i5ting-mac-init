@@ -19,6 +19,10 @@ $ curl -o- https://raw.githubusercontent.com/i5ting/i5ting-mac-init/master/insta
 - brew install ack  搜索代码神器
 - brew install autojump 终端下多目录跳转神器
 
+卸载brew
+
+> $ ruby uninstall.rb
+
 ## 3）vim
 
 我虽然不算vim党，但也深爱着。janus是一个非常好用的vim集成开发环境。比如ctrl-p、nerdtree等插件都集成了，对我这种懒人足够了。
