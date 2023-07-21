@@ -18,6 +18,7 @@ $ curl -o- https://raw.githubusercontent.com/i5ting/i5ting-mac-init/master/insta
 - brew install wget 下载、扒站神器
 - brew install ack  搜索代码神器
 - brew install autojump 终端下多目录跳转神器
+- brew install fig 可视化自动补全神器
 
 卸载brew
 

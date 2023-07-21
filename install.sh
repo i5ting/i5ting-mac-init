@@ -20,6 +20,7 @@ brew install wget
 brew install ack
 brew install autojump
 brew install tree
+brew install fig
 
 git config --global user.name  'i5ting'
 git config --global user.email 'i5ting@126.com'
@@ -42,20 +43,20 @@ mkdir -p ~/workspace/github
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 
 nvm install stable
-nvm alias default node 
+nvm alias default node
 
 npm install --global yrm --registry=https://registry.npm.taobao.org
 
 yrm use cnpm
 npm i -g yarn
 
-# https://github.com/i5ting/i5ting-mac-init/issues/1 
+# https://github.com/i5ting/i5ting-mac-init/issues/1
 # ~/.oh-my-zsh/plugins/git/git.plugin.zsh 和lazycommit效果一样，故而弃用
 npm i -g lazycommit
 npm i -g lazyclone
 
- # ssh-keygen 
-ssh-keygen 
+ # ssh-keygen
+ssh-keygen
 cat ~/.ssh/id_rsa.pub
 echo 'save it to gitlab or https://github.com/settings/keys'
 
