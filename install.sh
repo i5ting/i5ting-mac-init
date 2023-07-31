@@ -17,7 +17,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # brew install
 brew install git
 brew install wget
-brew install ack
+brew install ripgrep
 brew install autojump
 brew install tree
 brew install fig
