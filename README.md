@@ -8,7 +8,7 @@ $ curl -o- https://raw.githubusercontent.com/i5ting/i5ting-mac-init/master/insta
 
 ## 1）oh my zsh是我最习惯的shell，终端下非常好用
 
-配合iterm2分屏 + spectacle全屏，几乎无敌
+配合warp(not iterm2)分屏 + spectacle全屏，几乎无敌
 
 ## 2）brew是mac装软件非常好的方式，和apt-get、rpm等都非常类似
 
@@ -18,7 +18,7 @@ $ curl -o- https://raw.githubusercontent.com/i5ting/i5ting-mac-init/master/insta
 - brew install wget 下载、扒站神器
 - brew install ack  搜索代码神器
 - brew install autojump 终端下多目录跳转神器
-- brew install fig 可视化自动补全神器
+- brew install --cask warp 可视化自动补全AI神器
 
 卸载brew
 
